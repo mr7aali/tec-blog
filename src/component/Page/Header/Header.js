@@ -65,7 +65,7 @@ function Header(props) {
           </IconButton>
 
          <Box sx={{
-              border:'1px solid red',
+              
               margin:'0 auto',
               display:'flex',
 
@@ -73,21 +73,21 @@ function Header(props) {
                <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1,margin:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1,cursor:'pointer', padding:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
           >
            Home
           </Typography>
                <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1,margin:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1,cursor:'pointer',padding:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
           >
             Post
           </Typography>
                <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1,margin:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1,cursor:'pointer',padding:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
           >
             Lifestyle
           </Typography>
