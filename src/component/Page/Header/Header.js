@@ -13,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -47,11 +47,13 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar  sx={{
-       
-        bgcolor:'transparent'
+
+
+      <AppBar sx={{
+        position:'static',
+        bgcolor: '#ffff'
       }} component="nav">
         <Toolbar>
           <IconButton
@@ -59,60 +61,45 @@ function Header(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2,color:'black', display: { sm: 'none' } }}
+            sx={{ mr: 2, color: 'black', display: { sm: 'none' } }}
           >
-            <MenuIcon  />
+            <MenuIcon />
           </IconButton>
 
-         <Box sx={{
-              
-              margin:'0 auto',
-              display:'flex',
+          <Box sx={{
 
-         }}>
-               <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1,cursor:'pointer', padding:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
-          >
-           Home
-          </Typography>
-               <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1,cursor:'pointer',padding:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
-          >
-            Post
-          </Typography>
-               <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1,cursor:'pointer',padding:"0px 10px",color:'black', display: { xs: 'none', sm: 'block' } }}
-          >
-            Lifestyle
-          </Typography>
+            margin: '0 auto',
+            display: 'flex',
 
-          
-         </Box>
+          }}>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, cursor: 'pointer', padding: "0px 10px", color: 'black', display: { xs: 'none', sm: 'block' } }}
+            >
+              Home
+            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, cursor: 'pointer', padding: "0px 10px", color: 'black', display: { xs: 'none', sm: 'block' } }}
+            >
+              Post
+            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, cursor: 'pointer', padding: "0px 10px", color: 'black', display: { xs: 'none', sm: 'block' } }}
+            >
+              Lifestyle
+            </Typography>
 
 
-
-
- 
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-        
-              </Button>
-            ))}
           </Box>
         </Toolbar>
       </AppBar>
 
-
-
       <Box component="nav">
-
 
         <Drawer
           container={container}
@@ -132,10 +119,13 @@ function Header(props) {
 
 
       </Box>
-      
+
 
 
     </Box>
+
+
+
   );
 }
 
