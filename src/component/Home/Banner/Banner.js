@@ -43,7 +43,7 @@ const Banner = () => {
                             <div className="sub-blog-container p-5 text-5xl bg-[#8e1d1d]">
 
 
-                                <h1 >iPadOS 14 introduces new designed specifically for iPad</h1>
+                                <h1 > <span className="underLine">iPadOS 14 introduces</span> <span className="underLine"> new designed </span><span className="underLine">specifically for iPad</span></h1>
                                 <Box sx={{ display: 'flex', alignItems:'center', justifyContent:'space-between' }}>
                                     <CardHeader
                                         sx={{ padding: '15px 0' }}
