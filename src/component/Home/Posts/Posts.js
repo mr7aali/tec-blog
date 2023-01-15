@@ -14,9 +14,6 @@ const Posts = () => {
                 </div>
             </div>
 
-
-
-
             <div className='same-post-box'>
                 <div className='same-post-box-img-container'>
                     <img src="https://i.ibb.co/85BT0Wh/demo-image-1-1230x615.jpg" alt="" srcset="" />
