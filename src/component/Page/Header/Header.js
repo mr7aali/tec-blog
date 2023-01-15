@@ -145,7 +145,7 @@ const Header = () => {
 
 
                         <Link to='/'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Home</Button></Link>
-                        <Link to='/dashboard'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Add Post</Button></Link>
+                        <Link to='/addpost'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Add Post</Button></Link>
                         <Link to='/blog'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Blog</Button></Link>
 
 

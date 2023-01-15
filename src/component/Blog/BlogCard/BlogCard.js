@@ -17,7 +17,7 @@ export default function BlogCard() {
 
     return (
 
-        <div className='max-w-screen-md mx-auto' style={{display:'grid' ,  gridTemplateColumns:'3fr 1fr',border:'1px solid red'}}>
+       
 
             <div className='max-w-screen-md mx-auto blg-card-container mb-5'>
 
@@ -28,7 +28,8 @@ export default function BlogCard() {
 
                 <div className='blog-card-header-container'>
                     <h1>
-                        iPadOS 14 introduces new designed specifically for iPad</h1>
+                        <span className="underLine-blg">iPadOS 14 introduces new designed specifically for iPad</span>
+                    </h1>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <CardHeader
                             sx={{ height: '1px' }}
@@ -56,7 +57,7 @@ export default function BlogCard() {
             </div>
 
 
-        </div>
+       
 
     );
 }

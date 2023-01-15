@@ -1,3 +1,4 @@
+import AddPost from "../AddPost/AddPost";
 import Blog from "../Blog/Blog";
 import Home from "../Home/Home";
 import LogIn from "../LogIn/LogIn";
@@ -29,6 +30,10 @@ export const router= createBrowserRouter([
             {
                 path:'/blog',
                 element:<Blog/>
+            },
+            {
+                path:'addpost',
+                element:<AddPost/>
             }
 
         ]
