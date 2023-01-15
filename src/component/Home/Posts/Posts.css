@@ -1,49 +1,109 @@
-.post-Container{
+.post-Container {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 5px;
     column-gap: 15px;
     padding: 20px;
 }
-.box-1{
-   grid-column-start: 1;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   height: 400px;
+
+.box-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 400px;
+    cursor: pointer;
 }
-.card-img-container{
+
+.card-img-container {
     height: 100%;
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+
 }
-.card-img-container img{
+
+.card-img-container img {
     height: 100%;
     border-radius: 8px;
+
+    width: 100%;
+    display: block;
+    transition: transform 1s;
 }
-.card1-blg{
+.box-1:hover img{
+    transform:scale(1.3)
+}
+
+.card1-blg {
     position: absolute;
-  
     bottom: 0;
     padding: 20px;
 }
-.card1-blg h1{
+
+.card1-blg h1 {
     font-size: 25px;
     color: white;
     font-weight: bold;
 }
-.same-post-box-img-container{
-    
+
+.same-post-box-img-container {
+    cursor: pointer;
     height: 135px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
 }
-.same-post-box-img-container img{
+
+.same-post-box-img-container img {
     border-radius: 8px;
     height: 100%;
-   
-}
-.same-post-box-blg{
+    width: 100%;
+    display: block;
+    transition: transform 1s;
 
+}
+.same-post-box:hover img{
+    transform:scale(1.3)
+}
+
+
+
+.same-post-box-blg {
+    cursor: pointer;
     margin: 0 2px;
     margin-top: 5px;
-   
+
+}
+
+.same-post-box-blg h2 {
+    color: black;
+    font-weight: 600;
+}
+.post-text-underline {
+    background-image:
+        linear-gradient(80deg, red, blue);
+    background-size: 00% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+
+.box-1:hover .post-text-underline {
+    background-size: 100% 3px;
+}
+
+.post-text-underline2 {
+    background-image:
+        linear-gradient(80deg, red, blue);
+    background-size: 00% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+.same-post-box:hover .post-text-underline2{
+    background-size: 100% 3px;
+
 }

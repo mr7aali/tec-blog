@@ -8,10 +8,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { Box } from "@mui/system";
 import CardHeader from '@mui/material/CardHeader';
 import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
 import { red } from '@mui/material/colors';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from "@mui/material";
 
 const Banner = () => {
@@ -29,7 +26,7 @@ const Banner = () => {
                 }}
                 navigation={true}
                 // Autoplay,
-                modules={[Pagination, Navigation]}
+                modules={[Autoplay,Pagination, Navigation]}
                 className="mySwiper"
             >
 
