@@ -1,0 +1,49 @@
+.post-Container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 5px;
+    column-gap: 15px;
+    padding: 20px;
+}
+.box-1{
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   height: 400px;
+}
+.card-img-container{
+    height: 100%;
+    position: relative;
+}
+.card-img-container img{
+    height: 100%;
+    border-radius: 8px;
+}
+.card1-blg{
+    position: absolute;
+  
+    bottom: 0;
+    padding: 20px;
+}
+.card1-blg h1{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+.same-post-box-img-container{
+    
+    height: 135px;
+}
+.same-post-box-img-container img{
+    border-radius: 8px;
+    height: 100%;
+   
+}
+.same-post-box-blg{
+
+    margin: 0 2px;
+    margin-top: 5px;
+   
+}

@@ -31,7 +31,7 @@
 
 }
 
-.full-banner-page-container {}
+
 
 .banner-img-container img {
     width: 100vw;
@@ -44,7 +44,7 @@
 .sub-blog-container {
 
 
-    width: 500px;
+    width: 450px;
     position: absolute;
     right: 100px;
     bottom: -150px;
@@ -80,6 +80,7 @@
     bottom: 10px;
     left: 0;
     width: 50%;
+    margin-left:80px ;
     position: absolute;
     bottom: 120px;
     background-color: transparent;
