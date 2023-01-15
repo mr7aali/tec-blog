@@ -24,6 +24,8 @@ import { AuthContext } from '../../contexts/AuthProvider';
 const Header = () => {
 
     const { user, LogOut } = useContext(AuthContext);
+
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -107,9 +109,9 @@ const Header = () => {
                                     <Typography sx={{ margin: '0 auto' }} textAlign="center">Home</Typography>
                                 </MenuItem>
                             </Link>
-                            <Link to='/dashboard'>
+                            <Link to='/addpost'>
                                 <MenuItem onClick={handleCloseNavMenu}>
-                                    <Typography sx={{ margin: '0 auto' }} textAlign="center">Dashboard</Typography>
+                                    <Typography sx={{ margin: '0 auto' }} textAlign="center">Add Post</Typography>
                                 </MenuItem>
                             </Link>
                             <Link to='/blog'>
@@ -143,14 +145,14 @@ const Header = () => {
 
 
                         <Link to='/'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Home</Button></Link>
-                        <Link to='/dashboard'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Dashboard</Button></Link>
+                        <Link to='/dashboard'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Add Post</Button></Link>
                         <Link to='/blog'><Button onClick={handleCloseUserMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Blog</Button></Link>
 
 
                     </Box>
 
                     {
-                        user?.email ? <>
+                        user?.uid ? <>
                             <Box sx={{ flexGrow: 0 }}>
 
                                 <Tooltip title="Open settings">
@@ -183,57 +185,55 @@ const Header = () => {
 
                                 </Menu>
                             </Box>
-                        </>:
-                    <>
-                        <Box sx={{ flexGrow: 0 }}>
+                        </> :
+                            <>
 
-                            <Button 
-                            variant='text'
-                            
-                            endIcon={<LoginIcon sx={{color:'#fff'}} />}
-                             sx={{
-                                padding:'7px 15px',
-                                margin: '0 15px',
-                               
-                             }
-                        
-                         }
-                            
-                            >
-                                
-                        <p className='text-white'>Log in</p></Button>
-                        </Box>
-                        <Box sx={{ flexGrow: 0 }}>
+                                <Link to='/login'>
+                                    <Box sx={{ flexGrow: 0 }}>
 
-                            <Button 
-                            variant='text'
-                            
-                            endIcon={<LogoutIcon sx={{color:'#fff'}} />}
-                             sx={{
-                                padding:'7px 15px',
-                               
-                               
-                             }
-                        
-                         }
-                            
-                            >
-                                
-                        <p className='text-white'>Register</p></Button>
-                        </Box>
+                                        <Button
+                                            variant='text'
 
-                       
-                    </>
+                                            endIcon={<LoginIcon sx={{ color: '#fff' }} />}
+                                            sx={{
+                                                padding: '7px 15px',
+                                                margin: ['0', '0 15px'],
+
+                                            }
+
+                                            }
+
+                                        >
+
+                                            <Typography sx={{ display: ['none', 'block'] }} className='text-white'>Log In</Typography></Button>
+                                    </Box>
+                                </Link>
+
+
+                                <Link to='register'>
+                                    <Box sx={{ flexGrow: 0 }}>
+
+                                        <Button
+                                            variant='text'
+
+                                            endIcon={<LogoutIcon sx={{ color: '#fff' }} />}
+                                            sx={{
+                                                padding: '7px 15px',
+
+
+                                            }
+
+                                            }
+
+                                        >
+
+                                            <Typography sx={{ display: ['none', 'block'] }} className='text-white'>Register</Typography></Button>
+                                    </Box>
+                                </Link>
+
+
+                            </>
                     }
-
-
-
-
-
-
-
-
-
 
                 </Toolbar>
 
