@@ -1,0 +1,25 @@
+.PostDetails-container {
+
+    padding: 5px;
+}
+
+.PostDetails-Header {}
+
+.postDetails-imgage-container {
+   
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 15px;
+}
+.PostDetails-container img{
+    border-radius: 15px;
+}
+.postdetails-blog h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+.postdetails-blog p{
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}

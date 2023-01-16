@@ -1,12 +1,10 @@
-import { Button } from '@mui/material';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
-
 import LoadingButton from '@mui/lab/LoadingButton';
 import SaveIcon from '@mui/icons-material/Save';
-import Stack from '@mui/material/Stack';
+
 
 const AddPost = () => {
     const { user } = useContext(AuthContext);
@@ -18,11 +16,7 @@ const AddPost = () => {
     const imgHostKey = 'b9cc75dfb9f8d26897e40cb96b3c38cd';
     const from = location.state?.from?.pathname || "/";
 
-    //    const handlePost =(data)=>{
-    //     data.authorEmail = user?.email;
-    //     console.log(data.Image[0]);
-
-    //    }
+    
 
 
     const handlePost = data => {
@@ -69,7 +63,7 @@ const AddPost = () => {
     };
 
     return (
-        <div>
+        <div className='mb-32'>
 
             <section className="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 mt-20">
                 <h1 className="text-xl font-bold text-white capitalize dark:text-white">Add post/blog</h1>
@@ -104,23 +98,7 @@ const AddPost = () => {
                             <label className="block text-sm font-medium text-white">
                                 Image
                             </label>
-                            {/* <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                <div className="space-y-1 text-center">
-                  <svg className="mx-auto h-12 w-12 text-white" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <div className="flex text-sm text-gray-600">
-                    <label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                      <span className="">Upload a file</span>
-                      <input  {...register("Image")} id="file-upload" name="file-upload" type="file" className="sr-only"  accept='image/*'  /> 
-                    </label>
-                    <p className="pl-1 text-white">or drag and drop</p>
-                  </div>
-                  <p className="text-xs text-white">
-                    PNG, JPG, GIF up to 10MB
-                  </p>
-                </div>
-              </div> */}
+                           
                             <input  {...register("Image")} type="file" accept='image/*' />
                         </div>
                     </div>

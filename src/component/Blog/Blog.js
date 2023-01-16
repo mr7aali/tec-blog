@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Blog.css'
 import BlogCard from './BlogCard/BlogCard';
 const Blog = () => {
@@ -23,11 +24,17 @@ const Blog = () => {
                 <div>
 
                  {
-                    Posts?.map(p=><BlogCard
+                    Posts?.map(p=>
+                    
+                    <Link to={`/postdetails/${p._id}`}>
+                    <BlogCard
                     post={p}
                     refetch={refetch}
                     key={p._id}
-                    />)
+                    />
+                    </Link>
+                    
+                    )
                  }
 
             

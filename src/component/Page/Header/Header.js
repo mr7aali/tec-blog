@@ -153,38 +153,30 @@ const Header = () => {
 
                     {
                         user?.uid ? <>
+                            
                             <Box sx={{ flexGrow: 0 }}>
-
-                                <Tooltip title="Open settings">
+                                {/* title="Open settings" */}
+                                <Tooltip >
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                         <Avatar alt="Remy Sharp" src={user?.photoURL} />
                                     </IconButton>
                                 </Tooltip>
 
 
-                                <Menu
-                                    sx={{ mt: '45px' }}
-                                    id="menu-appbar"
-                                    anchorEl={anchorElUser}
-                                    anchorOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    keepMounted
-                                    transformOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    open={Boolean(anchorElUser)}
-                                    onClose={handleCloseUserMenu}
-                                >
 
-                                    <MenuItem onClick={LogOut}>
-                                        <Typography textAlign="center">Logout</Typography>
-                                    </MenuItem>
 
-                                </Menu>
                             </Box>
+                            <Button
+                                onClick={LogOut}
+                                endIcon={<LogoutIcon sx={{ color: '#fff' }} />}
+                                sx={{
+                                    marginRight: '15px',
+                                    color: 'white',
+                                    fontWeight: '600',
+                                    display: 'block'
+                                }}
+                            ></Button>
+
                         </> :
                             <>
 

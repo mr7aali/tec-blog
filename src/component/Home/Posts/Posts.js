@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Posts.css'
 const Posts = () => {
 
@@ -13,22 +14,18 @@ const Posts = () => {
     })
 
 
-
-
     return (
         <div className='post-Container max-w-4xl mx-auto'>
 
             {
                 Posts?.map((p, i) =>
-                    <>
+                    < >
 
                         {
 
                             (i === 0) ?
-
-
-
-                                <div className='box-1 mb-3'>
+                           
+                                <Link to={`/postdetails/${p._id}`} key={p?._id} className='box-1 mb-3'>
                                     <div className='card-img-container'>
                                         <img src={p?.blogPicture} alt="" srcSet="" />
                                         <div className='card1-blg'>
@@ -37,9 +34,10 @@ const Posts = () => {
                                             </h1>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
+                                
                                 :
-                                <div className='same-post-box'>
+                                <Link  to={`/postdetails/${p._id}`} key={p?._id} className='same-post-box'>
                                     <div className='same-post-box-img-container'>
                                         <img src={p?.blogPicture} alt="" srcSet="" />
                                     </div>
@@ -48,21 +46,16 @@ const Posts = () => {
                                             <span className='post-text-underline2'>{p?.title}, {i}</span>
                                         </h2>
                                     </div>
-                                </div>
-
+                                </Link>
 
                         }
-
-
                     </>
 
                 )
             }
 
-
-
-
         </div>
+     
     );
 };
 

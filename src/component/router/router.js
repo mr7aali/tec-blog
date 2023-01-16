@@ -2,6 +2,7 @@ import AddPost from "../AddPost/AddPost";
 import Blog from "../Blog/Blog";
 import Home from "../Home/Home";
 import LogIn from "../LogIn/LogIn";
+import PostDetails from "../PostDetails/PostDetails";
 import Register from "../Register/Register";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -32,10 +33,19 @@ export const router= createBrowserRouter([
                 element:<Blog/>
             },
             {
-                path:'addpost',
+                path:'/addpost',
                 element:<AddPost/>
+            },
+            {
+                path:'/postdetails/:id',
+                element:<PostDetails/>,
+                loader: ({ params }) => fetch(`http://localhost:5000/postDetails/${params.id}`)
             }
+            
 
         ]
-    }
+    },
+    
+      
+    
 ])
