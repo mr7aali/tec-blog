@@ -7,7 +7,7 @@ const Blog = () => {
     const { data: Posts = [], refetch } = useQuery({
         queryKey: ['Posts'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/post');
+            const res = await fetch('https://tec-blog-server.vercel.app/post');
             const data = await res.json();
             return data;
         }
@@ -26,13 +26,13 @@ const Blog = () => {
                  {
                     Posts?.map(p=>
                     
-                    <Link to={`/postdetails/${p._id}`}>
+                    // <Link to={`/postdetails/${p._id}`}>
                     <BlogCard
                     post={p}
                     refetch={refetch}
                     key={p._id}
                     />
-                    </Link>
+                    // </Link>
                     
                     )
                  }

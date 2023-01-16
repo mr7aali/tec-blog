@@ -4,6 +4,7 @@ import './BlogCard.css'
 import { Avatar, Button, CardHeader } from '@mui/material';
 import { AuthContext } from '../../contexts/AuthProvider';
 import LoadingButton from '@mui/lab/LoadingButton';
+import { Link } from 'react-router-dom';
 
 export default function BlogCard({post,refetch}) {
     const [loadingBtnD, setLoadingBtnD] = React.useState(false);
@@ -15,7 +16,7 @@ export default function BlogCard({post,refetch}) {
         setLoadingBtnD(true);
         // console.log(data?._id)
         //https://daily-task-server-eta.vercel.app/deleteTask
-        fetch(`http://localhost:5000/deltePost?id=${id}`, {
+        fetch(`https://tec-blog-server.vercel.app/deltePost?id=${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -63,7 +64,7 @@ export default function BlogCard({post,refetch}) {
 
                             
                                {/* ( post?.authorEmail === user?.email) && */}
-                               <Button    size="small" variant="outlined">Read </Button>                    
+                            <Link to={`/postdetails/${post?._id}`}>   <Button    size="small" variant="outlined">Read </Button>      </Link>              
                            
                             <LoadingButton
                              disabled ={!( post?.authorEmail === user?.email)}

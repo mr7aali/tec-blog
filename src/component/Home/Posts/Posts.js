@@ -7,7 +7,7 @@ const Posts = () => {
     const { data: Posts = [] } = useQuery({
         queryKey: ['Posts'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/post');
+            const res = await fetch('https://tec-blog-server.vercel.app/post');
             const data = await res.json();
             return data;
         }

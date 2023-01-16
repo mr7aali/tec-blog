@@ -63,7 +63,7 @@ const LogIn = () => {
                        
                             <form onSubmit={handleSubmit(handleLogIN)}>
                                 {/* <!-- Email input --> */}
-                                <p className="mb-10 text-center text-3xl font-bold ">Please login to your account</p>
+                                <p className="mb-10 text-center text-3xl font-bold ">If you Login You Can add Post</p>
                                 <div className="mb-6">
                                 <TextField   {...register("Email")} fullWidth id="outlined-basic" label="Your name" variant="outlined" />
                                 </div>

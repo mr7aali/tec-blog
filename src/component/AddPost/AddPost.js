@@ -39,7 +39,7 @@ const AddPost = () => {
                 console.log(data2);
                 reset();
 
-                fetch('http://localhost:5000/addpost', {
+                fetch('https://tec-blog-server.vercel.app/addpost', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

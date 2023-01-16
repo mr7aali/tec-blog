@@ -3,6 +3,7 @@ import Blog from "../Blog/Blog";
 import Home from "../Home/Home";
 import LogIn from "../LogIn/LogIn";
 import PostDetails from "../PostDetails/PostDetails";
+import PrivetRout from "../PrivetRout/PrivetRout";
 import Register from "../Register/Register";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -18,6 +19,7 @@ export const router= createBrowserRouter([
         children:[
             {
                 path:'/',
+                
                 element:<Home/>
             },
             {
@@ -34,12 +36,12 @@ export const router= createBrowserRouter([
             },
             {
                 path:'/addpost',
-                element:<AddPost/>
+                element:<PrivetRout> <AddPost/></PrivetRout>
             },
             {
                 path:'/postdetails/:id',
                 element:<PostDetails/>,
-                loader: ({ params }) => fetch(`http://localhost:5000/postDetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://tec-blog-server.vercel.app/postDetails/${params.id}`)
             }
             
 
