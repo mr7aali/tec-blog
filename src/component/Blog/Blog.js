@@ -32,6 +32,7 @@ const Blog = () => {
                  {
                     Posts?.map(p=><BlogCard
                     post={p}
+                    refetch={refetch}
                     key={p._id}
                     />)
                  }

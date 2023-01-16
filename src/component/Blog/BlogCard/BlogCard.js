@@ -1,19 +1,33 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
 import './BlogCard.css'
 import { Avatar, Button, CardHeader } from '@mui/material';
-import { red } from '@mui/material/colors';
-export default function BlogCard({post}) {
-console.log(post);
+import { AuthContext } from '../../contexts/AuthProvider';
+import LoadingButton from '@mui/lab/LoadingButton';
+
+export default function BlogCard({post,refetch}) {
+    const [loadingBtnD, setLoadingBtnD] = React.useState(false);
+    const { user } = React.useContext(AuthContext);
+    console.log(post?.authorEmail)
+
+    const handleDelete = (id) => {
+        
+        setLoadingBtnD(true);
+        // console.log(data?._id)
+        //https://daily-task-server-eta.vercel.app/deleteTask
+        fetch(`http://localhost:5000/deltePost?id=${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                setLoadingBtnD(false);
+                console.log(data);
+                refetch();
+            })
+    }
+
+
+
 // const {title,author,authorPicture,blogPicture,blog}=post;
     return (
 
@@ -46,8 +60,19 @@ console.log(post);
                             subheader={post?.publishDate}
                         />
                         <Box sx={{ color: 'black' ,marginRight:'15px' }}>
-                            <Button    size="small" variant="outlined">Read </Button>
-                            <Button sx={{ marginLeft:'5px' }} color='error'  size="small" variant="outlined">Delete</Button>
+
+                            
+                               {/* ( post?.authorEmail === user?.email) && */}
+                               <Button    size="small" variant="outlined">Read </Button>                    
+                           
+                            <LoadingButton
+                             disabled ={!( post?.authorEmail === user?.email)}
+                              onClick={()=>handleDelete(post?._id)} 
+                              sx={{ marginLeft:'5px' }} color='error'  
+                              size="small" variant="outlined"
+                              loading={loadingBtnD}
+                              >
+                                Delete</LoadingButton>
                             
                         </Box>
                     </Box>
