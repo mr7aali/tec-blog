@@ -15,7 +15,7 @@ const Posts = () => {
 
 
     return (
-        <div className='post-Container max-w-4xl mx-auto'>
+        <div  className='post-Container max-w-4xl mx-auto'>
 
             {
                 Posts?.map((p, i) =>

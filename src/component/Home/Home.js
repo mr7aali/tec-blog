@@ -4,7 +4,7 @@ import Posts from './Posts/Posts';
 
 const Home = () => {
     return (
-        <div>
+        <div style={{background:'#fff'}}>
            <Banner/>
            
            <Posts/>

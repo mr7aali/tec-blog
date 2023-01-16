@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
        <div >
-         <footer style={{marginTop:'50px'}} className="text-center lg:text-left bg-gray-100 text-gray-600">
+         <footer style={{marginTop:'0px'}} className="text-center lg:text-left bg-gray-100 text-gray-600">
         <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
           <div className="mr-12 hidden lg:block">
             <span>Get connected with us on social networks:</span>

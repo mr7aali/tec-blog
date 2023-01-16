@@ -45,7 +45,7 @@ const LogIn = () => {
 
 
     return (
-        <div>
+        <div style={{background:'#fff'}}>
 
 {/* max-w-screen-lg mx-auto */}
             <div  className="h-screen  ">
