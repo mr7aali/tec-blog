@@ -14,7 +14,7 @@ const Blog = () => {
             return data;
         }
     })
-    // console.log(Posts);
+   
 
 
 
