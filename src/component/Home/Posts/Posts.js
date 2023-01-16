@@ -24,16 +24,27 @@ const Posts = () => {
 
     return (
         <div className='post-Container max-w-4xl mx-auto'>
-            <div className='box-1'>
-                <div className='card-img-container'>
-                    <img src="https://i.ibb.co/85BT0Wh/demo-image-1-1230x615.jpg" alt="" srcSet="" />
-                    <div className='card1-blg'>
-                        <h1>
-                            <span className="post-text-underline">Beauty of deep space. Billions of galaxies in</span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -41,6 +52,65 @@ const Posts = () => {
 
 
             {
+                Posts?.map((p, i) =>
+                    <>
+
+                        {
+
+                            (i === 0) ?
+
+
+
+                                <div className='box-1 mb-3'>
+                                    <div className='card-img-container'>
+                                        <img src={p?.blogPicture} alt="" srcSet="" />
+                                        <div className='card1-blg'>
+                                            <h1>
+                                                <span className="post-text-underline">{p?.title}, {i}</span>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                :
+                                <div className='same-post-box'>
+                                    <div className='same-post-box-img-container'>
+                                        <img src={p?.blogPicture} alt="" srcSet="" />
+                                    </div>
+                                    <div className='same-post-box-blg'>
+                                        <h2 className=''>
+                                            <span className='post-text-underline2'>{p?.title}, {i}</span>
+                                        </h2>
+                                    </div>
+                                </div>
+
+
+                        }
+
+
+
+                    </>
+
+                )
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {/* {
                 Posts?.map((p,i) =>
                     <>
                         <div className='same-post-box'>
@@ -56,7 +126,7 @@ const Posts = () => {
                     </>
                    
                 )
-            }
+            } */}
 
 
 
