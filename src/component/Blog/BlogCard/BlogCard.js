@@ -12,9 +12,9 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 import './BlogCard.css'
 import { Avatar, Button, CardHeader } from '@mui/material';
 import { red } from '@mui/material/colors';
-export default function BlogCard() {
-
-
+export default function BlogCard({post}) {
+console.log(post);
+// const {title,author,authorPicture,blogPicture,blog}=post;
     return (
 
        
@@ -22,30 +22,33 @@ export default function BlogCard() {
             <div className='max-w-screen-md mx-auto blg-card-container mb-5'>
 
                 <div  className='blog-card-img-container'>
-                    <img src="https://i.ibb.co/LdxCbWN/gallery-post-03-1024x512.jpg" alt="" srcset="" />
+                    
+
+                    <img src={post?.blogPicture} alt="" srcset="" />
 
                 </div>
 
                 <div className='blog-card-header-container'>
                     <h1>
-                        <span className="underLine-blg">iPadOS 14 introduces new designed specifically for iPad</span>
+                        <span className="underLine-blg">{post?.title}</span>
                     </h1>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <CardHeader
                             sx={{ height: '1px' }}
                             avatar={
-                                <Avatar sx={{ bgcolor: red[500], height: '25px', width: '25px' }} aria-label="recipe">
-                                    R
+                                <Avatar sx={{ height: '25px', width: '25px' }} aria-label="recipe">
+                                    <img src={post?.authorPicture} alt="" srcset="" />
                                 </Avatar>
                             }
 
 
-                            title="Shrimp and Chorizo Paella"
-                            subheader="September 14, 2016"
+                            title={post?.author}
+                            subheader={post?.publishDate}
                         />
                         <Box sx={{ color: 'black' ,marginRight:'15px' }}>
-                            <Button size="small" variant="text">Read Post</Button>
-
+                            <Button    size="small" variant="outlined">Read </Button>
+                            <Button sx={{ marginLeft:'5px' }} color='error'  size="small" variant="outlined">Delete</Button>
+                            
                         </Box>
                     </Box>
                 </div>

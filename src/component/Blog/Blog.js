@@ -14,7 +14,7 @@ const Blog = () => {
             return data;
         }
     })
-    console.log(Posts);
+    // console.log(Posts);
 
 
 
@@ -26,11 +26,17 @@ const Blog = () => {
                 <h1 className='text-3xl font-bold p-12 max-w-screen-lg	mx-auto'>Blog</h1>
             </div>
 
-            <div className='max-w-screen-md mx-auto' style={{ display: 'grid', gridTemplateColumns: '3fr 1fr', border: '1px solid red' }}>
+            <div className='max-w-screen-md mx-auto' style={{ display: 'grid', gridTemplateColumns: '3fr 1fr' }}>
                 <div>
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
+
+                 {
+                    Posts?.map(p=><BlogCard
+                    post={p}
+                    key={p._id}
+                    />)
+                 }
+
+            
                 </div>
 
 
