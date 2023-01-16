@@ -13,8 +13,6 @@ const LogIn = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
-
-
     const handleLogIN =data=>{
         console.log(data);
         const {Email,password}=data;
