@@ -6,7 +6,7 @@ import Register from "../Register/Register";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main");
-const { default: Header } = require("../Page/Header/Header");
+
 
 
 

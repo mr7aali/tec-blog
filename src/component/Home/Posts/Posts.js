@@ -3,9 +3,7 @@ import React from 'react';
 import './Posts.css'
 const Posts = () => {
 
-
-
-    const { data: Posts = [], refetch } = useQuery({
+    const { data: Posts = [] } = useQuery({
         queryKey: ['Posts'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/post');
@@ -17,39 +15,8 @@ const Posts = () => {
 
 
 
-    console.log(Posts)
-
-
-
-
     return (
         <div className='post-Container max-w-4xl mx-auto'>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             {
                 Posts?.map((p, i) =>
@@ -87,46 +54,10 @@ const Posts = () => {
                         }
 
 
-
                     </>
 
                 )
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* {
-                Posts?.map((p,i) =>
-                    <>
-                        <div className='same-post-box'>
-                            <div className='same-post-box-img-container'>
-                                <img src={p?.blogPicture} alt="" srcSet="" />
-                            </div>
-                            <div className='same-post-box-blg'>
-                                <h2 className=''>
-                                    <span className='post-text-underline2'>{p?.title}, {i}</span>
-                                </h2>
-                            </div>
-                        </div>
-                    </>
-                   
-                )
-            } */}
 
 
 

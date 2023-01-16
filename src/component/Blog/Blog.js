@@ -3,9 +3,6 @@ import React from 'react';
 import './Blog.css'
 import BlogCard from './BlogCard/BlogCard';
 const Blog = () => {
-
-
-
     const { data: Posts = [], refetch } = useQuery({
         queryKey: ['Posts'],
         queryFn: async () => {
@@ -15,10 +12,6 @@ const Blog = () => {
         }
     })
    
-
-
-
-
 
     return (
         <div className='Full-blog-container'>
