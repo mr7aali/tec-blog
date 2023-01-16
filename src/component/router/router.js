@@ -32,7 +32,7 @@ export const router= createBrowserRouter([
             },
             {
                 path:'/blog',
-                element:<Blog/>
+                element:<PrivetRout><Blog/></PrivetRout> 
             },
             {
                 path:'/addpost',

@@ -30,7 +30,7 @@ const Posts = () => {
                                         <img src={p?.blogPicture} alt="" srcSet="" />
                                         <div className='card1-blg'>
                                             <h1>
-                                                <span className="post-text-underline">{p?.title}, {i}</span>
+                                                <span className="post-text-underline">{p?.title}</span>
                                             </h1>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@ const Posts = () => {
                                     </div>
                                     <div className='same-post-box-blg'>
                                         <h2 className=''>
-                                            <span className='post-text-underline2'>{p?.title}, {i}</span>
+                                            <span className='post-text-underline2'>{p?.title}</span>
                                         </h2>
                                     </div>
                                 </Link>

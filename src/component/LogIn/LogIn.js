@@ -45,10 +45,10 @@ const LogIn = () => {
 
 
     return (
-        <div style={{background:'#fff'}}>
+        <div style={{background:'#fff', height:'1000px'}}>
 
 {/* max-w-screen-lg mx-auto */}
-            <div  className="h-screen  ">
+            <div style={{}}  className="h-full">
             
                 <div  className="container px-6 py-12 h-full mx-auto">
                     <div  className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800 max-w-screen-lg mx-auto">

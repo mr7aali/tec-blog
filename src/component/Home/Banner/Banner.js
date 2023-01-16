@@ -10,6 +10,7 @@ import CardHeader from '@mui/material/CardHeader';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -26,11 +27,11 @@ const Banner = () => {
                 }}
                 navigation={true}
                 // Autoplay,
-                modules={[Autoplay,Pagination, Navigation]}
+                modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
 
-
+                {/* postdetails/63c57d94ebd23f8e6e85d8e1 */}
                 <SwiperSlide>
                     <div className="full-banner-page-container">
                         <div className="banner-img-container">
@@ -65,7 +66,9 @@ const Banner = () => {
                                         {/* <IconButton aria-label="delete" size="small">
                                             <DeleteIcon fontSize="inherit" />
                                         </IconButton> */}
-                                     <Button variant="outlined">Read Post</Button>
+                                        <Link to='/postdetails/63c57d94ebd23f8e6e85d8e1'>
+                                            <Button variant="outlined">Read Post</Button>
+                                        </Link>
 
                                     </Box>
                                 </Box>
@@ -88,7 +91,7 @@ const Banner = () => {
 
 
                                 <h1 >
-                                    <span className="underLine">4 types of research methods all designers should know</span> 
+                                    <span className="underLine">4 types of research methods all designers should know</span>
                                 </h1>
                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                     <CardHeader
@@ -110,7 +113,9 @@ const Banner = () => {
                                         subheader="September 14, 2016"
                                     />
                                     <Box sx={{ color: 'black' }}>
-                                    <Button variant="outlined">Read Post</Button>
+                                    <Link to='/postdetails/63c57e11ebd23f8e6e85d8e2'>
+                                            <Button variant="outlined">Read Post</Button>
+                                        </Link>
 
                                     </Box>
                                 </Box>
@@ -132,9 +137,9 @@ const Banner = () => {
                             <div className="sub-blog-container p-5 text-5xl bg-[#8e1d1d]">
 
 
-                                <h1 > 
-                                    <span className="underLine">These 5 tips will help you nail your next design presentation</span> 
-                                    </h1>
+                                <h1 >
+                                    <span className="underLine">These 5 tips will help you nail your next design presentation</span>
+                                </h1>
                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                     <CardHeader
                                         sx={{ padding: '15px 0' }}
@@ -155,7 +160,9 @@ const Banner = () => {
                                         subheader="September 14, 2016"
                                     />
                                     <Box sx={{ color: 'black' }}>
-                                    <Button variant="outlined">Read Post</Button>
+                                    <Link to='/postdetails/63c57e6eebd23f8e6e85d8e3'>
+                                            <Button variant="outlined">Read Post</Button>
+                                        </Link>
 
                                     </Box>
                                 </Box>
